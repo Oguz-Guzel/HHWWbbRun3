@@ -40,3 +40,4 @@ Then plot various control regions via the following command line using batch (yo
 ```bash
 bambooRun -m python/controlPlotter.py config/analysis_2022.yml -o ./outputDir/ --envConfig config/cern.ini --distributed driver
 ```
+If some jobs fail or your connection gets lost, you can catch up by passing `--distributed finalize` after all jobs have finished. This will either give you the command to resubmit failed jobs or perform the final steps to produce plots.
